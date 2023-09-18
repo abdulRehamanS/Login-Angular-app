@@ -1,0 +1,32 @@
+<div class="container col-md-7">
+  <h2 style="color: red">User login</h2>
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"> User Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        [(ngModel)]="login.email"
+        #email="ngModel"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">User Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="pwd"
+        name="pwd"
+        [(ngModel)]="login.pwd"
+      />
+    </div>
+
+    <div>
+      <button class="btn btn-danger" (click)="onSubmit()">Login</button>
+    </div>
+  </form>
+</div>
